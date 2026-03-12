@@ -5,4 +5,7 @@ defmodule Project2 do
     do: text |> String.split(~r/[.!?]+/) |> Enum.map(&String.trim/1) |> Enum.reject(&(&1 == ""))
 
 end
-IO.inspect Project2.sentences("Test Sentance. Hello world. Does this work? I am a cool guy!    ")
+
+IO.puts("Enter sentance to split (testing):")
+input = IO.gets("") |> String.trim()
+IO.inspect Project2.sentences(input)
