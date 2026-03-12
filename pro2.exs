@@ -29,7 +29,6 @@ defmodule Project2 do
     IO.puts("Average Word Length: #{Float.round(avg(words), 1)} characters") # Average Word Length
   end
 end
-
 IO.puts("Enter your sentence:") # Prompt user for sentence
 input = IO.gets("") |> String.trim()  # Read Input
 
