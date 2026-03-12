@@ -6,7 +6,7 @@ defmodule Project2 do
 
   # Gets rid of punctuation and then splits the text into a list of words
   def words(text),
-    do: text |> String.replace(~r/[^a-z\s]/, "") |> String.split()
+    do: text |> String.downcase() |> String.replace(~r/[^a-z\s]/, "") |> String.split()
   # Count each word
   def freq([]), do: %{}        # Empty List
   def freq([h | t]), do: freq(t) |> Map.update(h, 1, fn n -> n + 1 end)  # Count each word
