@@ -32,4 +32,4 @@ end
 IO.puts("Enter your sentence:") # Prompt user for sentence
 input = IO.gets("") |> String.trim()  # Read Input
 
-Project2.run(input)  # Run baby run
+Project2.run(input)  # Run baby run shoud work on windows/mac
