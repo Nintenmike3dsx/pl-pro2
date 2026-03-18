@@ -19,13 +19,13 @@ defmodule Project2 do
   def run(text) do
     words = words(text) # List of Words
     freq  = freq(words) # Count How Often Each Word Appears
-    top5  = freq |> Enum.sort_by(fn {_, n} -> n end, :desc) |> Enum.take(3) # sort by count and take top 3 words
+    top3  = freq |> Enum.sort_by(fn {_, n} -> n end, :desc) |> Enum.take(3) # sort by count and take top 3 words
 
     IO.puts("Words: #{length(words)}") # Total Word Count
     IO.puts("Sentences: #{length(sentences(text))}") # Total Sentence Count
     IO.puts("Unique: #{map_size(freq)}") # Number of Different Words
     IO.puts("\nTop 3 words:") # Top 3 Words
-    Enum.each(top5, fn {word, n} -> IO.puts("  #{word}: #{n}") end) # Display Each Top Word and How Many Times it Came Up
+    Enum.each(top3, fn {word, n} -> IO.puts("  #{word}: #{n}") end) # Display Each Top Word and How Many Times it Came Up
     IO.puts("Average Word Length: #{Float.round(avg(words), 1)} characters") # Average Word Length
   end
 end
