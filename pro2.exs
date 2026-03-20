@@ -1,3 +1,4 @@
+# Project 2 - Functional Programming - Michael Arend v1.0!
 defmodule Project2 do
 
   # Splits Sentences at Every . ! or ? and Removes Extra Space
